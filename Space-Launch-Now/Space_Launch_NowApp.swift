@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Space_Launch_NowApp: App {
+    
+    @StateObject
+    private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(modelData)
         }
     }
 }
